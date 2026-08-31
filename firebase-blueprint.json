@@ -1,0 +1,80 @@
+{
+  "entities": {
+    "Application": {
+      "title": "Application",
+      "description": "Candidate recruitment application for CLB Tin Học",
+      "type": "object",
+      "properties": {
+        "fullName": {
+          "type": "string",
+          "description": "Full name of candidate",
+          "maxLength": 100
+        },
+        "studentClass": {
+          "type": "string",
+          "description": "Class and MSSV e.g. 10A1 - 220012",
+          "maxLength": 50
+        },
+        "email": {
+          "type": "string",
+          "description": "Contact email",
+          "maxLength": 100
+        },
+        "phone": {
+          "type": "string",
+          "description": "Phone / Zalo number",
+          "maxLength": 20
+        },
+        "department": {
+          "type": "string",
+          "description": "Department choice",
+          "maxLength": 100
+        },
+        "subRole": {
+          "type": "string",
+          "description": "Specific sub-role within department",
+          "maxLength": 100
+        },
+        "skills": {
+          "type": "array",
+          "description": "Selected tech skills and tags"
+        },
+        "flexZone": {
+          "type": "string",
+          "description": "Portfolio, github, or project showcase links",
+          "maxLength": 1000
+        },
+        "motivation": {
+          "type": "string",
+          "description": "Why the candidate wants to join CLB Tin Học",
+          "maxLength": 1000
+        },
+        "scoreByAI": {
+          "type": "number",
+          "description": "AI rating score from 1 to 10"
+        },
+        "aiVibe": {
+          "type": "string",
+          "description": "Short vibe tag determined by AI",
+          "maxLength": 100
+        },
+        "aiReview": {
+          "type": "string",
+          "description": "Witty 2-sentence Vietnamese review by AI Head of Club",
+          "maxLength": 500
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp string"
+        }
+      },
+      "required": ["fullName", "studentClass", "email", "phone", "department", "subRole", "motivation"]
+    }
+  },
+  "firestore": {
+    "/applications/{applicationId}": {
+      "schema": "Application",
+      "description": "Submitted recruitment applications"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "NK Tech Club - Recruitment Portal",
+  "description": "Portal tuyển thành viên NK Tech Club chuẩn Google Form Vũ Trụ với hiệu ứng cartoon vui vẻ & AI chấm điểm hồ sơ",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
